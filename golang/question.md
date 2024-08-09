@@ -3,7 +3,7 @@
 ## Slice, Array
 
 ## Struct
-
+1. Golang có phải ngôn ngữ OOP không?
 ## Defer, Panic, Recovery
 1. ```
    func main() {
