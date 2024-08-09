@@ -8,6 +8,7 @@
 ## Interface, Method, Function
 1. Golang có phải ngôn ngữ OOP không?
 2. Variadic Functions là gì?
+3. Generic Type là gì?
 ## Defer, Panic, Recovery
 1. ```
    func main() {
