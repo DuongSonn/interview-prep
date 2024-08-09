@@ -1,6 +1,7 @@
 # GOLANG INTERVIEW QUESTIONS
 
-## Slice, Array
+## Slice, Array, Map
+1. Slice khác gì với Array?
 
 ## Struct
 
