@@ -65,3 +65,5 @@
 - When you search a data using the index, it will get the page(s) have the index data then go to the heap to fetch the data. The index have the exact location of the data inside the heap -> You dont need to scan the full heap, you just need to get the exact page(s) that have the data
 - You can index 1 or more columns
 - The smaller the index. The faster the search 
+
+## Indexing
