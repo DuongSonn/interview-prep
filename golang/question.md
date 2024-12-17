@@ -22,7 +22,7 @@
     defer() {print(10)}
    }
    ```
-Thứ tự in ra ngoài màn hình là gì?   
+Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_recovery_1)
 
 ## Routine, Mutex
 1. Tại sao nên để số lượng worker = số CPU? [Answer](./answer.md#routine_mutex_1)
