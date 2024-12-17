@@ -67,3 +67,9 @@
 - The smaller the index. The faster the search 
 
 ## Indexing
+### Index scan vs Table scan vs Bitmap Index scan
+- Index scan: DB system will scan the index table, each time it finds the data -> it will fetch that data from heap
+- Table scan: DB system will do the full heap scan
+- Bitmap Index scan: DB system will create a bitmap and mark all the valid value in the bitmap -> it will fetch data base on bitmap from the heap. Case use multiple condtion, all bitmaps will merge using AND, OR operator to find the valid value
+### Key vs Non-Key column Database Indexing
+- If you include the columns inside the index key and you only select those columns, DB system will only do the index scan and get all the data you need
