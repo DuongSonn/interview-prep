@@ -25,4 +25,4 @@
 Thứ tự in ra ngoài màn hình là gì?   
 
 ## Routine, Mutex
-1. Tại sao nên để số lượng worker = số CPU? [Answer](./answer.md)
+1. Tại sao nên để số lượng worker = số CPU? [Answer](./answer.md#routine_mutex_1)
