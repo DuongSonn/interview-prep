@@ -73,3 +73,9 @@
 - Bitmap Index scan: DB system will create a bitmap and mark all the valid value in the bitmap -> it will fetch data base on bitmap from the heap. Case use multiple condtion, all bitmaps will merge using AND, OR operator to find the valid value
 ### Key vs Non-Key column Database Indexing
 - If you include the columns inside the index key and you only select those columns, DB system will only do the index scan and get all the data you need
+- If you include to many columns inside the index key -> The size of the data is bigger -> You have to fetch more page to read the data -> Make index slower
+### Index scan vs Index Only Scan
+### Combining Indexes
+- When you use combining indexes (Ex: col a and b) only the left most col is used in index scan (col a) or query condition using AND
+
+## B-Tree
