@@ -79,3 +79,21 @@
 - When you use combining indexes (Ex: col a and b) only the left most col is used in index scan (col a) or query condition using AND
 
 ## B-Tree
+
+## Database Partitioning
+- Is a technique splitting the table smaller, all smaller tables are in the same DB and the DB system will manage and handle all the splitting but you have to handle the table name yourself
+- Horizontal Partitioning: split by row
+- Vertical Partitioning: split by col
+- Type of partitioning:
+  - By range: dates, ids
+  - By list: discrete values (country, ...) or zip codes
+  - By hash:
+- Pros:
+  - Improve query performance when accessing a single partition
+  - Easy bulk loading (because when you attach partition to the table -> all insert data will be insert to partition) 
+- Cons:
+  - Update that move rows from 1 partition to another -> slow
+  - Scan all partitions -> slower performance than scan the table
+  - Hard to change schema -> change 1 row make all the partitions change
+
+## Database Sharding
