@@ -81,7 +81,8 @@
 ## B-Tree
 
 ## Database Partitioning
-- Is a technique splitting the table smaller, all smaller tables are in the same DB and the DB system will manage and handle all the splitting but you have to handle the table name yourself
+- Is a technique splitting the table smaller, all smaller tables are in the same DB
+- Create mutiple tables in 1 database and attach it as partition of 1 database. The DB system will manage and handle all the splitting
 - Horizontal Partitioning: split by row
 - Vertical Partitioning: split by col
 - Type of partitioning:
@@ -97,3 +98,18 @@
   - Hard to change schema -> change 1 row make all the partitions change
 
 ## Database Sharding
+- Is a technique spliting the table into multiple databases
+- Create multiple tables across multiple DBs with the same schema and client have a mechanic to determine where the data belong to
+- Pros:
+  - Scalability
+  - Optimal and smaller index size
+  - Security (client access control)
+- Cons:
+  - Complex client(need a machenic to determine where the data belong to)
+  - Transactions across shards
+  - Rollbacks
+  - Schema changes are hard
+  - Join
+  - Has to know the key to determine where to query
+ 
+## Database Replication
