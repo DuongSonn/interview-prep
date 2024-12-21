@@ -99,7 +99,7 @@
 
 ## Database Sharding
 - Is a technique spliting the table into multiple databases
-- Create multiple tables across multiple DBs with the same schema and client have a mechanic to determine where the data belong to
+- Create multiple tables across multiple DBs with the same schema and client have a mechanic(consistent hashing) to determine where the data belong to
 - Pros:
   - Scalability
   - Optimal and smaller index size
