@@ -113,3 +113,15 @@
   - Has to know the key to determine where to query
  
 ## Database Replication
+- Master/Standby Replication:
+  - 1 master node that accepts writes/ddls
+  - 1 or more backup nodes that receive those writes from the master
+  - Simple to implement, no conflicts
+  - Replicas are connected with the master using TCP
+- Multi-master Replication
+  - Multiple Master node that accepts writes
+  - Need to resolves conflict
+  - 1 or more backup nodes that receive those writes from the masters
+- Synchronous and Asynchronous Replication:
+  - Sync Replication: A write transaction to the master will be blocked until it is written to the backup nodes
+  - ASync Replication: A write transaction is considered successful if it written to the master, then the write is applied to the backup nodes async
