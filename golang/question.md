@@ -26,3 +26,4 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 
 ## Routine, Mutex
 1. Tại sao nên để số lượng worker = số CPU? [Answer](./answer.md#routine_mutex_1)
+2. Điều gì xảy ra nếu buffered channel bị full và có data mới được đẩy vào channel? 
