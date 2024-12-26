@@ -27,8 +27,8 @@
   - Fair Dispatch: By default, RabbitMQ dispatch the messages evenly. There are cases when message needs a lot of work and message doesn't need a lot of work -> 1 consumer have to do a lot of work, and others is free. You can config so that a consumber doesn't take more than 1 message at a time, doesn't receive acknowlege = not ready. But this will cause the queue to fill up and lead to message lost or rejected if all consumers are busy.
 - Publish/Subcribe:
   - Fanout: exchange broadcasts all the messages it receives to all the queues
-  - Direct:
-  - Topic:
+  - Direct: exchange send the message to a specific queues it bind with. If exchange binds with multiple queues, it sends the message to all the queues
+  - Topic: is like direct exchange but you can use pattern for the queues
   - Headers:
 
 # Kafka
