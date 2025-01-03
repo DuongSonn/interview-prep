@@ -1,5 +1,7 @@
 # GOLANG INTERVIEW QUESTIONS
 
+1. Điều gì làm golang khác việt so biệt so với ngôn ngữ khác? [Answer](./answer.md#common_1)
+
 ## Slice, Array, Map
 1. Slice khác gì với Array?
 
@@ -26,4 +28,5 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 
 ## Routine, Mutex
 1. Tại sao nên để số lượng worker = số CPU? [Answer](./answer.md#routine_mutex_1)
-2. Điều gì xảy ra nếu buffered channel bị full và có data mới được đẩy vào channel? 
+2. Điều gì xảy ra nếu buffered channel bị full và có data mới được đẩy vào channel? [Answer](./answer.md#routine_mutex_2)
+3. So sánh thread và goroutine [Answer](./answer.md#routine_mutex_3)
