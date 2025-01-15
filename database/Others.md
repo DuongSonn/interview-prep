@@ -32,3 +32,9 @@
   - Headers:
 
 # Kafka
+- Concepts:
+  - Event:
+  - Producers
+  - Consumers
+  - Topics: events and organized and durably stored in topic. Events can be read in topic multiple time and are not deleted after consumption
+  - Brokers: is a servdr that stores and manages data within the Kafka cluster. It acts as a middleman, facilitating the exchange of messages between producers (data publishers) and consumers (data subscribers). 
