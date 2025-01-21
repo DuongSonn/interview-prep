@@ -34,6 +34,17 @@ Kết quả in ra màn hình [Answer](./answer.md#slice_2)
    ```
 Kết quả in ra màn hình [Answer](./answer.md#slice_3)
 
+4. ```
+   package main
+   func main() {
+	   m := make(map[string]int, 3)
+	   x := len(m)
+	   m["Go"] = m["Go"]
+	   y := len(m)
+	   println(x, y)
+   }
+   ```
+Kết quả in ra màn hình [Answer](./answer.md#slice_4)
 ## Struct
 
 ## Interface, Method, Function
