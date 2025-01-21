@@ -25,9 +25,9 @@
   - Không sử dụng shared memories, liên lạc với nhau thông qua channel
 4. <a name="routine_mutex_4"></a> Goroutine được quản lý và lên lịch bởi gì?
   - Goroutine được quản lý bở Go runtime và lên lịch bở Go scheduler
-5. <a name="routine_mutex_5"></a>
+5. <a name="routine_mutex_5"></a>  Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy?
 - Nếu channel là buffered channel, vẫn lấy được data từ channel đến khi channel hết data
 - Nếu channel đẫ hết data thì dữ liệu sẽ trả về 0 và false
 - Gửi data vào channel sẽ gây ra panic
-6. <a name="routine_mutex_6"></a>
+6. <a name="routine_mutex_6"></a> Điều gì xảy ra với child routine nếu 1 parent routine panic()?
 - Nếu 1 routine bị panic thì các routine associate với routine đấy cũng sẽ bị panic
