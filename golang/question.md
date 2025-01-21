@@ -30,5 +30,6 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 1. Tại sao nên để số lượng worker = số CPU? [Answer](./answer.md#routine_mutex_1)
 2. Điều gì xảy ra nếu buffered channel bị full và có data mới được đẩy vào channel? [Answer](./answer.md#routine_mutex_2)
 3. So sánh thread và goroutine [Answer](./answer.md#routine_mutex_3)
-4. Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy [Answer](./answer.md#routine_mutex_4)
-5. Điều gì xảy ra với child routine nếu 1 parent routine panic() [Answer](./answer.md#routine_mutex_5)
+4. Goroutine được quản lý và lên lịch bởi gì? [Answer](./answer.md#routine_mutex_4)
+5. Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy [Answer](./answer.md#routine_mutex_5)
+6. Điều gì xảy ra với child routine nếu 1 parent routine panic() [Answer](./answer.md#routine_mutex_6)
