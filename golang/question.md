@@ -1,9 +1,38 @@
 # GOLANG INTERVIEW QUESTIONS
 
 1. Điều gì làm golang khác việt so biệt so với ngôn ngữ khác? [Answer](./answer.md#common_1)
+2. 
 
 ## Slice, Array, Map
-1. Slice khác gì với Array?
+1. Slice khác gì với Array? [Answer](./answer.md#slice_1)
+2. ```
+   package main
+   import "fmt"
+
+   func main() {
+   	a := [...]int{0, 1, 2, 3}
+   	x := a[:1]
+   	y := a[2:]
+   	x = append(x, y...)
+   	x = append(x, y...)
+   	fmt.Println(a, x)
+   }
+   ```
+Kết quả in ra màn hình [Answer](./answer.md#slice_2)
+
+3. ```
+   package main
+   func main() {
+   	var x = []string{"A", "B", "C"}
+   	for i, s := range x {
+   		print(i, s, ",")
+   		x[i+1] = "M"
+   		x = append(x, "Z")
+   		x[i+1] = "Z"
+   	}
+   }
+   ```
+Kết quả in ra màn hình [Answer](./answer.md#slice_3)
 
 ## Struct
 
