@@ -7,7 +7,6 @@
   - Để deploy Go chỉ cần 1 file binary -> deploy 1 cách đơn giản
 
 ## Slice,Array,Map
-1. <a name="slice_1">So sánh parallel và multi thread</a>
 2. <a name="slice_2">[0,2,3,3]; [0,2,3,3,3]</a>
 - Do x đang tham chiếu đến a  nên mọi sự thay đổi của x sẽ ảnh hưởng đến a và ngược lại (tương tự với y)
 ```
