@@ -73,3 +73,5 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 4. Goroutine được quản lý và lên lịch bởi gì? [Answer](./answer.md#routine_mutex_4)
 5. Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy [Answer](./answer.md#routine_mutex_5)
 6. Điều gì xảy ra với child routine nếu 1 parent routine panic() [Answer](./answer.md#routine_mutex_6)
+7. So sánh thread và routine
+8. 
