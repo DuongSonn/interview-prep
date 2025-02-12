@@ -5,7 +5,6 @@
   - Go compile code thẳng về binary code
   - Go là statically typed và compiled language(biến phải khai báo type và type được check trong lúc compile)
   - Để deploy Go chỉ cần 1 file binary -> deploy 1 cách đơn giản
-2. <a name="common_2">So sánh parallel và multi thread</a>
 
 ## Slice,Array,Map
 1. <a name="slice_1">So sánh parallel và multi thread</a>
