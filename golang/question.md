@@ -1,7 +1,7 @@
 # GOLANG INTERVIEW QUESTIONS
 
 1. Điều gì làm golang khác việt so biệt so với ngôn ngữ khác? [Answer](./answer.md#common_1)
-2. 
+2. Heap và stack khác nhau thế nào? Khi nào sử dụng heap, khi nào sử dụng stack?
 
 ## Slice, Array, Map
 1. Slice khác gì với Array? [Answer](./answer.md#slice_1)
