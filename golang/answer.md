@@ -5,7 +5,9 @@
   - Go compile code thẳng về binary code
   - Go là statically typed và compiled language(biến phải khai báo type và type được check trong lúc compile)
   - Để deploy Go chỉ cần 1 file binary -> deploy 1 cách đơn giản
-
+2. <a name="common_2">
+  - Heap dùng để cấp phát bộ nhớ cho biến cục bộ (biến trong func), rất nhanh, được dọn ngay sau khi func kết thúc và kích thước có giới hạn nhỏ (thường là vài MB)
+  - Stack dùng để cấp phát bộ nhớ cho biến toàn cục, chậm hơn so với stack. được quản lý bở GC(Garbage Collector) và không có giới hạn kích thước. Thường được dùng để lưu trữ con trỏ, map, slice, array
 ## Slice,Array,Map
 2. <a name="slice_2">[0,2,3,3]; [0,2,3,3,3]</a>
 - Do x đang tham chiếu đến a  nên mọi sự thay đổi của x sẽ ảnh hưởng đến a và ngược lại (tương tự với y)
@@ -64,8 +66,11 @@ println(x, y)
 4. <a name="routine_mutex_4">Goroutine được quản lý và lên lịch bởi gì?</a>
   - Goroutine được quản lý bở Go runtime và lên lịch bở Go scheduler
 5. <a name="routine_mutex_5">Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy?</a>
-- Nếu channel là buffered channel, vẫn lấy được data từ channel đến khi channel hết data
-- Nếu channel đẫ hết data thì dữ liệu sẽ trả về 0 và false
-- Gửi data vào channel sẽ gây ra panic
+  - Nếu channel là buffered channel, vẫn lấy được data từ channel đến khi channel hết data
+  - Nếu channel đẫ hết data thì dữ liệu sẽ trả về 0 và false
+  - Gửi data vào channel sẽ gây ra panic
 6. <a name="routine_mutex_6">Điều gì xảy ra với child routine nếu 1 parent routine panic()?</a> 
-- Nếu 1 routine bị panic thì các routine associate với routine đấy cũng sẽ bị panic
+  - Nếu 1 routine bị panic thì các routine associate với routine đấy cũng sẽ bị panic
+7. <a name="routine_mutex_6">So sánh thread với routine
+  - Thread được quản lý và lập lịch bở OS, số lượng tối đa ít do bị giới hạn bởi tài nguyên hệ thống, chặn toàn bộ thread nếu bị block, liên hệ với nhau sử dụng shared memory, chạy theo mô hình parallel
+  - Routine đượic quản lý bởi goruntime và lập lịch bởi go scheduler, số lượng tối đa nhiều(hàng triệu) do, khi 1 routine bị chặn các routine khác vẫn chạy bt, liên hệ với nhau sử dụng channel, chạy theo mô hình concurrent
