@@ -1,7 +1,7 @@
 # GOLANG INTERVIEW QUESTIONS
 
 1. Điều gì làm golang khác việt so biệt so với ngôn ngữ khác? [Answer](./answer.md#common_1)
-2. Heap và stack khác nhau thế nào? Khi nào sử dụng heap, khi nào sử dụng stack?
+2. Heap và stack khác nhau thế nào? Khi nào sử dụng heap, khi nào sử dụng stack? [Answer](./answer.md#common_2)
 
 ## Slice, Array, Map
 1. Slice khác gì với Array? [Answer](./answer.md#slice_1)
@@ -73,5 +73,5 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 4. Goroutine được quản lý và lên lịch bởi gì? [Answer](./answer.md#routine_mutex_4)
 5. Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy [Answer](./answer.md#routine_mutex_5)
 6. Điều gì xảy ra với child routine nếu 1 parent routine panic() [Answer](./answer.md#routine_mutex_6)
-7. So sánh thread và routine
+7. So sánh thread và routine [Answer](./answer.md#routine_mutex_7)
 8. 
