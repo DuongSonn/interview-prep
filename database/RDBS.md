@@ -77,6 +77,13 @@
 ### Index scan vs Index Only Scan
 ### Combining Indexes
 - When you use combining indexes (Ex: col a and b) only the left most col is used in index scan (col a) or query condition using AND
+### Type of indexing
+- Primary Key Index
+- Unique Index
+- Clustered Index: Data will be ordered
+- Nonclustered Index
+- Text Index
+- Composite Index: Combine multiple column in 1 index
 
 ## B-Tree
 
