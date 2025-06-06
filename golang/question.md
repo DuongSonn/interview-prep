@@ -76,3 +76,5 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 6. Điều gì xảy ra với child routine nếu 1 parent routine panic() [Answer](./answer.md#routine_mutex_6)
 7. So sánh thread và routine [Answer](./answer.md#routine_mutex_7)
 8. Khỏi tạo goroutine tốn bao nhiêu tài nguyên? Giới hạn goroutine là bao nhiêu routine?
+9. Go leak là gì? Cách nào để phòng trống leak?
+10. Các kỹ thuật tránh deadlock trong go Routine
