@@ -3,6 +3,7 @@
 1. Điều gì làm golang khác việt so biệt so với ngôn ngữ khác? [Answer](./answer.md#common_1)
 2. Heap và stack khác nhau thế nào? Khi nào sử dụng heap, khi nào sử dụng stack? [Answer](./answer.md#common_2)
 3. GC của golang hoạt động thế nào?
+4. So sánh var, := và new()
 
 ## Slice, Array, Map
 1. Slice khác gì với Array? [Answer](./answer.md#slice_1)
