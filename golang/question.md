@@ -2,8 +2,8 @@
 
 1. Điều gì làm golang khác việt so biệt so với ngôn ngữ khác? [Answer](./answer.md#common_1)
 2. Heap và stack khác nhau thế nào? Khi nào sử dụng heap, khi nào sử dụng stack? [Answer](./answer.md#common_2)
-3. GC của golang hoạt động thế nào?
-4. So sánh var, := và new()
+3. GC của golang hoạt động thế nào? [Answer](./answer.md#common_3)
+4. So sánh var, := và new() [Answer](./answer.md#common_4)
 
 ## Slice, Array, Map
 1. Slice khác gì với Array? [Answer](./answer.md#slice_1)
@@ -76,6 +76,6 @@ Thứ tự in ra ngoài màn hình là gì? [Answer](./answer.md#defer_panice_re
 5. Điều gì xảy ra nếu 1 channel close() và cố gắng đẩy/lấy data từ channel đấy [Answer](./answer.md#routine_mutex_5)
 6. Điều gì xảy ra với child routine nếu 1 parent routine panic() [Answer](./answer.md#routine_mutex_6)
 7. So sánh thread và routine [Answer](./answer.md#routine_mutex_7)
-8. Khỏi tạo goroutine tốn bao nhiêu tài nguyên? Giới hạn goroutine là bao nhiêu routine?
-9. Go leak là gì? Cách nào để phòng trống leak?
-10. Các kỹ thuật tránh deadlock trong go Routine
+8. Khỏi tạo goroutine tốn bao nhiêu tài nguyên? Giới hạn goroutine là bao nhiêu routine? [Answer](./answer.md#routine_mutex_8)
+9. Go leak là gì? Cách nào để phòng trống leak? [Answer](./answer.md#routine_mutex_9)
+10. Các kỹ thuật tránh deadlock trong go Routine [Answer](./answer.md#routine_mutex_10)
