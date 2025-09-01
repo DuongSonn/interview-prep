@@ -14,6 +14,18 @@
   - var: có thể khai báo biến có hoặc không có giá trị khởi tạo - TH không có giá trị thì sẽ nhận giá trị mặc định của kiểu dữ liệu, có thể khai báo biến toàn cục hoặc biến trong hàm
   - :=: chỉ khai báo biến trong hàm, bắt buộc phải có giá trị khởi tạo, không cần khai báo kiểu dữ liệu
   - new(): trả về con trỏ tới vùng nhớ đã được cấp phát và gán giá trị mặc định, dùng với kiểu dữ liệu cơ bản hoặc struct
+5. <a name="common_5">Interface trong Go có gì đặc biệt? Sự khác biệt so với interface của Java/C++?</a>
+  - interface trong golang là dùng để khai báo method cho 1 struct của Golang, ngoài ra interface còn có thể tượng chưng cho loại dữ liệu bất kỳ trong golang
+  - điểm khác nhau giữa interface của golang và java:
+    - interface của golang ko cần dùng keyword implements hay extends giống của java
+    - interface của golang ko có keyword default giống của java
+    - có empty inteface = kiểu data bất kỳ
+6. <a name="common_6">Zero value trong Go là gì, tại sao lại quan trọng?</a>
+  - Zero value trong Go là giá trị mặc định các data type của golang: VD string là "", int hay float là 0, bool là false, map là nil,....
+  - Zero value trong golang giúp xác định được giá trị mặc định của 1 biến khi mới khai báo, ko cần khai báo giá trị mặc định của 1 biến mà có thể dùng luôn
+7. <a name="common_7"> Tại sao Go không hỗ trợ kế thừa (inheritance) mà dùng  composition?</a>
+  - Vấn đề nếu dùng kế thừa khi thay đổi interface cha -> phải thay đổi cả code của interface con
+  - cho phép kế thừa 2 hoặc nhiều interface có method giống nhau (java không cho phép)
 ## Slice,Array,Map
 2. <a name="slice_2">[0,2,3,3]; [0,2,3,3,3]</a>
 - Do x đang tham chiếu đến a  nên mọi sự thay đổi của x sẽ ảnh hưởng đến a và ngược lại (tương tự với y)
