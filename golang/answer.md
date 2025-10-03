@@ -26,6 +26,21 @@
 7. <a name="common_7"> Tại sao Go không hỗ trợ kế thừa (inheritance) mà dùng  composition?</a>
   - Vấn đề nếu dùng kế thừa khi thay đổi interface cha -> phải thay đổi cả code của interface con
   - cho phép kế thừa 2 hoặc nhiều interface có method giống nhau (java không cho phép)
+8. <a name="common_8"> SOLID là gì và được áp dụng cho golang như thế nào?
+  - S – Single Responsibility Principle
+    - Mỗi struct/class/module chỉ nên có 1 lý do để thay đổi.
+    - Ví dụ: struct UserRepository chỉ lo việc lưu/truy xuất dữ liệu User, không xử lý logic validate.
+  - O – Open/Closed Principle
+    - Mở rộng thì dễ (open for extension), chỉnh sửa code cũ thì hạn chế (closed for modification).
+    - Ví dụ: dùng interface trong Go để thêm cách lưu trữ mới (DB, cache, file) mà không sửa code core. 
+  - L – Liskov Substitution Principle
+    - Một type con có thể thay thế type cha mà không phá logic.
+    - Trong Go: bất kỳ struct nào implement interface thì đều thay thế được, miễn là hành vi hợp lý. 
+  - I – Interface Segregation Principle
+    - Interface nên nhỏ gọn, tránh “fat interface” mà mọi struct phải implement toàn bộ. 
+  - D – Dependency Inversion Principle
+    - Phụ thuộc vào abstraction (interface) chứ không phụ thuộc vào implementation cụ thể.
+    - Trong Go: code business logic dùng interface (Storage), còn implementation (MySQLStorage, RedisStorage) inject từ ngoài vào. 
 ## Slice,Array,Map
 2. <a name="slice_2">[0,2,3,3]; [0,2,3,3,3]</a>
 - Do x đang tham chiếu đến a  nên mọi sự thay đổi của x sẽ ảnh hưởng đến a và ngược lại (tương tự với y)
