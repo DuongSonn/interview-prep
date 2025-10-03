@@ -88,7 +88,7 @@ println(x, y)
   - Nếu channel đẫ hết data thì dữ liệu sẽ trả về 0 và false
   - Gửi data vào channel sẽ gây ra panic
 6. <a name="routine_mutex_6">Điều gì xảy ra với child routine nếu 1 parent routine panic()?</a> 
-  - Nếu 1 routine bị panic thì các routine associate với routine đấy cũng sẽ bị panic
+  - Không điều gì xảy ra cả. Vì 2 routine này chạy trên 2 stack riêng biệt. Tuy nhiên 1 routine bị panic nếu ko xử lý sẽ gây panic cho main => Dừng cả chương trình.
 7. <a name="routine_mutex_7">So sánh thread với routine</a>
   - Thread được quản lý và lập lịch bở OS, số lượng tối đa ít do bị giới hạn bởi tài nguyên hệ thống, chặn toàn bộ thread nếu bị block, liên hệ với nhau sử dụng shared memory, chạy theo mô hình parallel
   - Routine đượic quản lý bởi goruntime và lập lịch bởi go scheduler, số lượng tối đa nhiều(hàng triệu) do, khi 1 routine bị chặn các routine khác vẫn chạy bt, liên hệ với nhau sử dụng channel, chạy theo mô hình concurrent
