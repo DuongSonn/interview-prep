@@ -26,7 +26,7 @@
 7. <a name="common_7"> Tại sao Go không hỗ trợ kế thừa (inheritance) mà dùng  composition?</a>
   - Vấn đề nếu dùng kế thừa khi thay đổi interface cha -> phải thay đổi cả code của interface con
   - cho phép kế thừa 2 hoặc nhiều interface có method giống nhau (java không cho phép)
-8. <a name="common_8"> SOLID là gì và được áp dụng cho golang như thế nào?
+8. <a name="common_8"> SOLID là gì và được áp dụng cho golang như thế nào?</a>
   - S – Single Responsibility Principle
     - Mỗi struct/class/module chỉ nên có 1 lý do để thay đổi.
     - Ví dụ: struct UserRepository chỉ lo việc lưu/truy xuất dữ liệu User, không xử lý logic validate.
@@ -40,7 +40,15 @@
     - Interface nên nhỏ gọn, tránh “fat interface” mà mọi struct phải implement toàn bộ. 
   - D – Dependency Inversion Principle
     - Phụ thuộc vào abstraction (interface) chứ không phụ thuộc vào implementation cụ thể.
-    - Trong Go: code business logic dùng interface (Storage), còn implementation (MySQLStorage, RedisStorage) inject từ ngoài vào. 
+    - Trong Go: code business logic dùng interface (Storage), còn implementation (MySQLStorage, RedisStorage) inject từ ngoài vào.
+9. <a name="common_9"> Rune trong golang được xử dụng thế nào và dùng trong TH nào? </a>
+rune trong Go chủ yếu dùng khi xử lý ký tự Unicode (UTF-8), vì byte chỉ đúng cho ASCII (1 byte/char). rune thường dùng để:
+- Khi xử lý chuỗi có ký tự UTF-8
+- Khi cần so sánh hoặc kiểm tra ký tự
+- Khi cần duyệt ký tự thực sự
+- Khi muốn sửa / thay ký tự trong chuỗi
+- Khi xử lý substring theo ký tự
+
 ## Slice,Array,Map
 2. <a name="slice_2">[0,2,3,3]; [0,2,3,3,3]</a>
 - Do x đang tham chiếu đến a  nên mọi sự thay đổi của x sẽ ảnh hưởng đến a và ngược lại (tương tự với y)
