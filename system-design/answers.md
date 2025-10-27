@@ -10,3 +10,9 @@ Giải pháp:
 Trong cùng transaction DB, vừa update record vừa ghi event vào bảng outbox.
 Một background process đọc bảng outbox và publish sang message broker (Kafka/RabbitMQ).
 Khi publish thành công → mark event là “processed”.
+2. Các thuật toán có thể sử dụng cho ratelimit là gì? Giải thích
+  - Token bucket: VD bạn có 1 cái xô nước, mỗi 1 request sẽ tương ứng với 1 lượng nước lấy ra khỏi xô. Khi xô hết nước thì ko cho lấy ra nũa. Thuận toán này sẽ có 2 input (size của xô, và thời gian refill nước vào xô)
+  - Leaking bucket
+  - Fixed window counter
+  - Sliding window log
+  - Sliding window counter 
