@@ -16,3 +16,6 @@ Khi publish thành công → mark event là “processed”.
   - Fixed window counter: VD bạn có 1 cửa sổ, cửa sổ đó có 1 counter, trong 1 khaorng thời gian nếu count <= 0 thì ko nhận request nữa. Sang khỏang thời gian mới thì của sổ reset counter. Tuy nhiên thuật toán này có 1 đểm yếu: Với thời điểm traffic lớn -> reqeust có thể bị block -> Ko hợp lý lắm.
   - Sliding window log: VD bạn có 1 của sổ trượt, cửa sở sẽ lưu lại log truy cập, nếu log truy cập nằm ngoài khoảng của cửa sổ -> bỏ log đi
   - Sliding window counter: VD bạn có 1 cửa sổ trượt, cửa sổ sẽ lưu lại count số lần truy cập tại 1 thời điểm. Để tính số request ở thời điểm hiện tại sẽ dùng công thức current_count + prev_count * %request trùng giữa 2 khoảng thời gian. Tuy nhiên thauajt toán này sẽ có sai số, nhưng tỉ lệ sai số sẽ rẩt nhỏ. 
+3. Các vấn đề khi xây dựng rate limit:
+- Race condtion trong code (nó giống như phantom read và repeatable read trong sql)
+- Sync giữa các service rate limit. VD: Có nhiều hệ thống micro service -> Cần nhiều service rate limit để tăng tốc chạy -> Cách để sync giữa các rate limit service là chạy trên chung 1 redis.
