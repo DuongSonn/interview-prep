@@ -13,6 +13,6 @@ Khi publish thành công → mark event là “processed”.
 2. Các thuật toán có thể sử dụng cho ratelimit là gì? Giải thích
   - Token bucket: VD bạn có 1 xô nước, mỗi 1 request sẽ tương ứng với 1 lượng nước lấy ra khỏi xô. Khi xô hết nước thì ko cho lấy ra nũa. Thuận toán này sẽ có 2 input (size của xô, và thời gian refill nước vào xô)
   - Leaking bucket: VD bạn có 1 xô đượng nước, mỗi 1 request sẽ tương ứng lượng nước đổ vào xô. Khi xô đầy, nước bổ vào thêm sẽ bị bỏ ra ngoài. Thuật toán này sẽ có 2 input(size của xô và số lượng nước(request) bị lấy ra khỏi xô mỗi lần xử lý)
-  - Fixed window counter: VD bạn có 1 cửa sổ trượt, của sổ đó có 1 counter, trong 1 khaorng thời gian nếu count <= 0 thì ko nhận request nữa. Sang khỏang thời gian mới thì của sổ reset counter. Tuy nhiên thuật toán này có 1 đểm yếu: Với thời điểm traffic lớn -> reqeust có thể bị block -> Ko hợp lý lắm.
+  - Fixed window counter: VD bạn có 1 cửa sổ, cửa sổ đó có 1 counter, trong 1 khaorng thời gian nếu count <= 0 thì ko nhận request nữa. Sang khỏang thời gian mới thì của sổ reset counter. Tuy nhiên thuật toán này có 1 đểm yếu: Với thời điểm traffic lớn -> reqeust có thể bị block -> Ko hợp lý lắm.
   - Sliding window log: VD bạn có 1 của sổ trượt, cửa sở sẽ lưu lại log truy cập, nếu log truy cập nằm ngoài khoảng của cửa sổ -> bỏ log đi
-  - Sliding window counter 
+  - Sliding window counter: VD bạn có 1 cửa sổ trượt, cửa sổ sẽ lưu lại count số lần truy cập tại 1 thời điểm. Để tính số request ở thời điểm hiện tại sẽ dùng công thức current_count + prev_count * %request trùng giữa 2 khoảng thời gian. Tuy nhiên thauajt toán này sẽ có sai số, nhưng tỉ lệ sai số sẽ rẩt nhỏ. 
