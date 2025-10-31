@@ -31,3 +31,7 @@ Bình thường trong 1 hệ thống CSDL nosql phân tán thì cần đáp ứn
 5. Các vấn đề cần chú ý khi build micro services:
   - Data replication: 
   - Data partition: Partition ở đây giống như sharding, chia nhỏ dữ liệu ra các node khác nhau -> Dùng thuật toán consistant hashing để giải quyết
+  - Consistency:
+    - Strong consistency
+    - Weak consistency
+    - Eventual consistency
