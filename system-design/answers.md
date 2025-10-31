@@ -34,4 +34,7 @@ Bình thường trong 1 hệ thống CSDL nosql phân tán thì cần đáp ứn
   - Consistency:
     - Strong consistency
     - Weak consistency
-    - Eventual consistency
+    - Eventual consistency: Thuật toán vector clock
+6. Cách để tạo unique ID trong hệ thống micro service
+  - Để DB tự tạo
+  - 
