@@ -31,3 +31,9 @@ Chính xác: khi cache đầy, policy ảnh hưởng đến hit rate. Redis mặ
   - Cache Stampede / Thundering Herd
 Khi nhiều request cùng query 1 key vừa hết hạn → tất cả cùng truy vấn DB → DB overload.
 Giải pháp: Random TTL, Mutex/lock key để chỉ 1 request rebuild cache, các request khác chờ, Pre-warming hoặc refresh trước khi TTL hết.
+6. Vì sao SELECT LIMIT/OFFSET có thể bị trùng row giữa các transaction?
+  - Transaction 1 lock row nhưng Transaction 2 vẫn nhìn thấy toàn bộ row trong snapshot (MVCC).
+OFFSET đếm theo snapshot → không trừ row đã bị lock.
+Chỉ khi Transaction 2 cố lock row thì SKIP LOCKED mới loại row đó.
+  ➡ Kết quả:
+OFFSET vẫn trỏ vào đúng 100 row đầu → nhưng nhiều row đã bị lock → SKIP LOCKED bỏ qua → batch 2 “tụt xuống” và quét vào batch 1 → gây trùng.
